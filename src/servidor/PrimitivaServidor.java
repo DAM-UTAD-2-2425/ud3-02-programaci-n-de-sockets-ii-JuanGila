@@ -10,9 +10,7 @@ public class PrimitivaServidor {
 			linea = canal.leerCombinacion();
 			respuesta = canal.comprobarBoleto ();
 			canal.enviarRespuesta (respuesta);
-		} while (!linea.equals("FIN"));
+		} while (!linea.equalsIgnoreCase("FIN"));
 		canal.finSesion();
-		
 	}
-
 }
